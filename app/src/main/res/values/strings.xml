@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MovieDB</string>
+
+    <string name="saved_movies">movies</string>
+    <string name="saved_tvseries">tvseries</string>
+
+    <string name="close">Close</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="action_share">Share</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_search">Search Activity</string>
+    <string name="search_menu">Search</string>
+    <string name="searchable_label">Search Query</string>
+    <string name="searchable_hint">Search a movie or tv series</string>
+    <string name="search_empty_results">No results found</string>
+    <string name="title_activity_movie_details">Movie Details</string>
+    <string name="title_activity_tvseries_details">TVSeries Details</string>
+    <string name="autoload_movie">Loading more movies...</string>
+    <string name="autoload_tvseries">Loading more shows...</string>
+</resources>

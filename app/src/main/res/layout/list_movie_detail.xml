@@ -1,0 +1,249 @@
+<ScrollView xmlns:MovieDB="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/md_white_1000"
+            android:orientation="vertical"
+            tools:context=".activities.MovieDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/toolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/mPoster"
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/placeholder"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_toRightOf="@id/mPoster"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/mTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:maxLines="3"
+                    android:textColor="@color/MovieDBPrimaryText"
+                    android:textSize="20sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/mPopularityLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/middleDivider"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/MovieDetailColumn"
+                            android:text="TMDB Popularity"
+                            android:textColor="@color/MovieDBSecondaryText"/>
+
+                        <TextView
+                            android:id="@+id/mPopularity"
+                            style="@style/MovieDetailColumn"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/middleDivider"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"/>
+
+                    <LinearLayout
+                        android:id="@+id/mRateLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/middleDivider"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/MovieDetailColumn"
+                            android:text="TMDB Rate"
+                            android:textColor="@color/MovieDBSecondaryText"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/mRateIcon"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center_horizontal"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"/>
+
+                            <TextView
+                                android:id="@+id/mVoteAverage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/mRateIcon"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/MovieDBPrimaryText"
+                                android:textSize="16sp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="6dp"
+                        card_view:cardBackgroundColor="@color/MovieDBAccent"
+                        card_view:cardCornerRadius="2dp"
+                        card_view:cardElevation="6dp">
+
+                        <TextView
+                            android:id="@+id/add2WatchList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingBottom="8.5dp"
+                            android:paddingLeft="18dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8.5dp"
+                            android:text="Add to Watchlist"
+                            android:textColor="@color/md_white_1000"
+                            android:textSize="18sp"/>
+
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mMovieInfoCard"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mPoster"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                card_view:cardBackgroundColor="@color/MovieDBBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/mOverviewHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="Movie Info"
+                        android:textColor="@color/MovieDBPrimaryText"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/mOverview"
+                        style="@style/MovieDetailColumn"
+                        android:layout_below="@id/mOverviewHeader"/>
+
+                    <TextView
+                        android:id="@+id/mGenres"
+                        style="@style/MovieDetailColumn"
+                        android:layout_below="@id/mOverview"
+                        android:text="Genre: "
+                        android:textColor="@color/MovieDBSecondaryText"/>
+
+                    <TextView
+                        android:id="@+id/mRuntime"
+                        style="@style/MovieDetailColumn"
+                        android:layout_below="@id/mGenres"
+                        android:text="Running time: "
+                        android:textColor="@color/MovieDBSecondaryText"/>
+
+                    <TextView
+                        android:id="@+id/mReleaseDate"
+                        style="@style/MovieDetailColumn"
+                        android:layout_below="@id/mRuntime"
+                        android:text="Release Date: "
+                        android:textColor="@color/MovieDBSecondaryText"/>
+
+                    <TextView
+                        android:id="@+id/mLanguage"
+                        style="@style/MovieDetailColumn"
+                        android:layout_below="@id/mReleaseDate"
+                        android:text="Language: "
+                        android:textColor="@color/MovieDBSecondaryText"/>
+
+                    <TextView
+                        android:id="@+id/mDirector"
+                        style="@style/MovieDetailColumn"
+                        android:layout_below="@id/mLanguage"
+                        android:text="Director: "
+                        android:textColor="@color/MovieDBSecondaryText"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mMovieCreditsCard"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mMovieInfoCard"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                card_view:cardBackgroundColor="@color/MovieDBBackground">
+
+                <LinearLayout
+                    android:id="@+id/mCreditsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mMovieInfoCard"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/mCreditsHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="Major Casts"
+                        android:textColor="@color/MovieDBPrimaryText"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

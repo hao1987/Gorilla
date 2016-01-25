@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/creditInfoLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/creditThumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/avatar"/>
+
+    <LinearLayout
+        android:id="@+id/creditInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/creditThumbnail"
+        android:layout_alignBottom="@+id/creditThumbnail"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/MovieDBPrimaryText"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/MovieDBSecondaryText"
+            android:textSize="14sp"
+            android:paddingBottom="3dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

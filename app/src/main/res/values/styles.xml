@@ -1,0 +1,73 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Base" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/MovieDBPrimary</item>
+        <item name="colorPrimaryDark">@color/MovieDBDarkPrimary</item>
+        <item name="colorAccent">@color/MovieDBAccent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/MovieDBBackground</item>
+    </style>
+
+    <style name="Theme.MovieDB" parent="Theme.Base" />
+
+    <style name="ActionBarThemeOverlay">
+        <item name="android:textColorPrimary">@color/MovieDBBackground</item>
+        <item name="android:textColorSecondary">@color/MovieDBBackground</item>
+        <item name="colorControlHighlight">@color/MovieDBBackground</item>
+        <item name="android:actionMenuTextColor">@color/MovieDBBackground</item>
+        <item name="android:background">@color/MovieDBPrimary</item>
+    </style>
+
+    <style name="ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/MovieDBIcons</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="UserEditText">
+        <item name="android:padding">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+    <style name="SlideTab">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="FilmItemTitle">
+        <item name="android:textColor">@color/MovieDBPrimaryText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FilmItemTitleOverview" parent="FilmItemTitle">
+        <item name="android:gravity">left</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="MovieDetailColumn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
